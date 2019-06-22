@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
     /**
      * Callback for searchRepositories using Retrofit.
      * Responds if Successful or Error execution.
-     * If successful, list will be displayed via SearchResultListAdapter
+     * If successful, list will be displayed using SearchResultListAdapter
      */
     private val callback = object : Callback<SearchResult> {
         override fun onFailure(call: Call<SearchResult>?, t: Throwable?) {
@@ -138,6 +138,8 @@ class MainActivity : AppCompatActivity() {
                     repoRetriever.getRepositories(callback)
                 }
             } else {
+
+                /// The Builder pattersn
                 AlertDialog.Builder(this).setTitle("No Internet Connection")
                         .setMessage("Please check your internet connection and try again or you can check saved items in Menu -> Saved Items.")
                         .setPositiveButton(android.R.string.ok) { _, _ -> }

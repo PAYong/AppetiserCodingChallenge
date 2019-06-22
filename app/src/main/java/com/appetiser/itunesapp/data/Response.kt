@@ -23,3 +23,4 @@ data class SearchItems(
         val currency: String?
 )
 
+

@@ -20,6 +20,8 @@ import kotlinx.android.synthetic.main.item_repo.view.*
 
 /**
  * The custom adapter for SearchResult
+ * Follows the Design Pattern - Structural Pattern
+ * The adapter handle the data and send the bind command to the ViewHolder
  * @param repoList Response from the search result from iTunes which is to be displayed in the list.
  * @param activity Used in displaying the detailed view.
  * @param mPrefs The SharedPreferences instance used when saving the SearchResult object.
