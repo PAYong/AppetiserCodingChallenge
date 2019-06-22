@@ -1,19 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightBlue">
 
-  <android.support.v7.widget.RecyclerView
-      android:id="@+id/repoList"
-      android:layout_width="match_parent"
-      android:layout_height="751dp"
-      android:layout_below="@+id/buttonSearch"/>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/darkBlue"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
-  <Button
-      android:id="@+id/buttonSearch"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="Refresh Search"
-      android:onClick="Search"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/repoListFaveItems"
+        style="@style/Widget.AppCompat.ListView"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/my_toolbar"
+        android:visibility="gone"
+        android:layout_height="match_parent" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/repoList"
+        style="@style/Widget.AppCompat.ListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/my_toolbar" />
+
+
+
 
 </RelativeLayout>

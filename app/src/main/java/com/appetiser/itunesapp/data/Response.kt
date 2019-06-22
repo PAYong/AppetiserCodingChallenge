@@ -11,5 +11,15 @@ data class SearchItems(
         val trackName: String?,
         val artworkUrl100: String?,
         val trackPrice: String?,
-        val primaryGenreName: String?
+        val primaryGenreName: String?,
+
+        //Other info
+        val longDescription: String?,
+        val artistName: String?,
+        val collectionName: String?,
+        val collectionPrice: String?,
+        val releaseDate: String?,
+        val country: String?,
+        val currency: String?
 )
+
