@@ -5,7 +5,9 @@ import retrofit2.Call
 import retrofit2.http.GET
 
 /**
- *  Interface using Retrofit to connect to iTunes.
+ * Interface using Retrofit to connect to iTunes.
+ * Design Pattern - Facade using Retrofit
+ * Advantage: Easier to use by just creating interface to provide API data to client classes
  */
 interface ItunesService {
 

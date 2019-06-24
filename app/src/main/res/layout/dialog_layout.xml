@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="300dp"
-    android:layout_height="500dp"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
     android:background="@color/white"
     android:orientation="vertical"
     android:padding="10dp">
@@ -22,8 +22,8 @@
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:layout_margin="10dp"
-        android:scaleType="centerInside"
-        tools:src="@drawable/ic_round_face_24px" />
+        android:scaleType="fitCenter"
+        tools:src="@drawable/ic_outline_movie_filter_24px" />
 
     <TextView
         android:id="@+id/dialog_trackname"
@@ -98,11 +98,11 @@
         tools:text="Country" />
 
 <ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
         <TextView
+            android:layout_margin="10dp"
             android:id="@+id/description"
-            android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
