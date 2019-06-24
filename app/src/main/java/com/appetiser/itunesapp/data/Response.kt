@@ -14,6 +14,7 @@ data class SearchItems(
         val primaryGenreName: String?,
 
         //Other info
+        val kind: String?,
         val longDescription: String?,
         val artistName: String?,
         val collectionName: String?,

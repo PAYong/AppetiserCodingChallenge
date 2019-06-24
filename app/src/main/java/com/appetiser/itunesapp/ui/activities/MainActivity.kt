@@ -12,6 +12,7 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.Toast
 import com.appetiser.itunesapp.api.RepositoryRetriever
 import com.appetiser.itunesapp.data.SaveFileItems
 import com.appetiser.itunesapp.data.SearchResult
@@ -78,16 +79,13 @@ class MainActivity : AppCompatActivity() {
                 startSearch();
                 repoListFaveItems.visibility = View.GONE
                 repoList.visibility = View.VISIBLE
+                Toast.makeText(this, "List refresh",Toast.LENGTH_LONG).show()
             }
             com.appetiser.itunesapp.R.id.saved_items ->{
                 retrieveSavedItems()
                 repoListFaveItems.visibility = View.VISIBLE
                 repoList.visibility = View.GONE
-            }
-            com.appetiser.itunesapp.R.id.home ->{
-                startSearch()
-                repoListFaveItems.visibility = View.GONE
-                repoList.visibility = View.VISIBLE
+                Toast.makeText(this, "Showing saved items",Toast.LENGTH_LONG).show()
             }
             else -> {
             }

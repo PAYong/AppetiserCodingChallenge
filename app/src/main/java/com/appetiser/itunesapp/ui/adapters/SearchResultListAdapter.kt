@@ -68,9 +68,14 @@ class SearchResultListAdapter(val repoList: SearchResult?, val activity: Activit
         fun bindRepo(repo: SearchItems?) {
 
             with(repo) {
-                itemView.trackname.text = repo?.trackName.orEmpty()
+                if(repo?.trackName != null ) { // There are instances that Track Name is empty (e.g. Audiobook, just show collection name)
+                    itemView.trackname.text = repo?.trackName.orEmpty()
+                    itemView.trackPrice.text = repo?.trackPrice.orEmpty()
+                }else{
+                    itemView.trackname.text = repo?.collectionName.orEmpty()
+                    itemView.trackPrice.text = repo?.collectionPrice.orEmpty()
+                }
                 itemView.primaryGenreName.text = repo?.primaryGenreName.orEmpty()
-                itemView.trackPrice.text = repo?.trackPrice.orEmpty()
                 Picasso.get().load(repo?.artworkUrl100).error(R.drawable.ic_round_error_outline_24px).into(itemView.icon)
             }
         }
@@ -96,13 +101,26 @@ class SearchResultListAdapter(val repoList: SearchResult?, val activity: Activit
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
             dialog.setCancelable(false)
             dialog.setContentView(R.layout.dialog_layout)
-            dialog.dialog_trackname.setText(item.trackName)
+            dialog.artist.setText(item.artistName)
             dialog.dialog_primaryGenreName.setText(item.primaryGenreName)
-            dialog.dialog_trackPrice.setText(item.trackPrice)
+            if(item.trackName!=null) {
+                dialog.dialog_trackname.setText("Track name: " + item.trackName)
+                dialog.dialog_trackPrice.setText("Price: " + item.trackPrice + "$")
+            }
+            else{
+                dialog.dialog_trackname.visibility =View.GONE
+                dialog.dialog_trackPrice.visibility =View.GONE
+            }
+            dialog.collection_name.setText("Collection: " + item.collectionName)
+            dialog.collection_price.setText("Collection price: " + item.collectionPrice + "$")
+            dialog.country.setText("Country: " + item.country)
             dialog.description.setText(item.longDescription)
             Picasso.get().load(item.artworkUrl100).error(R.drawable.ic_round_error_outline_24px).into(dialog.dialog_icon)
             dialog.setCancelable(true)
             dialog.show()
+            dialog.close_button.setOnClickListener(){
+                dialog.dismiss();
+            }
         }
 
     }
