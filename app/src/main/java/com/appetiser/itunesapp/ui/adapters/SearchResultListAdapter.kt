@@ -20,7 +20,7 @@ import kotlinx.android.synthetic.main.item_repo.view.*
 
 /**
  * The custom adapter for SearchResult
- * Follows the Design Pattern - Structural Pattern
+ * Design Pattern - Structural Pattern using Adapter
  * The adapter handle the data and send the bind command to the ViewHolder
  * @param repoList Response from the search result from iTunes which is to be displayed in the list.
  * @param activity Used in displaying the detailed view.
@@ -70,13 +70,13 @@ class SearchResultListAdapter(val repoList: SearchResult?, val activity: Activit
             with(repo) {
                 if(repo?.trackName != null ) { // There are instances that Track Name is empty (e.g. Audiobook, just show collection name)
                     itemView.trackname.text = repo?.trackName.orEmpty()
-                    itemView.trackPrice.text = repo?.trackPrice.orEmpty()
+                    itemView.trackPrice.text = repo?.trackPrice.orEmpty() + "$"
                 }else{
                     itemView.trackname.text = repo?.collectionName.orEmpty()
-                    itemView.trackPrice.text = repo?.collectionPrice.orEmpty()
+                    itemView.trackPrice.text = repo?.collectionPrice.orEmpty() +  "$"
                 }
                 itemView.primaryGenreName.text = repo?.primaryGenreName.orEmpty()
-                Picasso.get().load(repo?.artworkUrl100).error(R.drawable.ic_round_error_outline_24px).into(itemView.icon)
+                Picasso.get().load(repo?.artworkUrl100).error(R.drawable.ic_outline_movie_filter_24px).into(itemView.icon)
             }
         }
 
@@ -115,7 +115,7 @@ class SearchResultListAdapter(val repoList: SearchResult?, val activity: Activit
             dialog.collection_price.setText("Collection price: " + item.collectionPrice + "$")
             dialog.country.setText("Country: " + item.country)
             dialog.description.setText(item.longDescription)
-            Picasso.get().load(item.artworkUrl100).error(R.drawable.ic_round_error_outline_24px).into(dialog.dialog_icon)
+            Picasso.get().load(item.artworkUrl100).error(R.drawable.ic_outline_movie_filter_24px).into(dialog.dialog_icon)
             dialog.setCancelable(true)
             dialog.show()
             dialog.close_button.setOnClickListener(){

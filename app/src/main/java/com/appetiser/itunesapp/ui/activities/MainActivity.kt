@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
      */
     private val callback = object : Callback<SearchResult> {
         override fun onFailure(call: Call<SearchResult>?, t: Throwable?) {
-            Log.e("MainActivity", "Problem calling Github API", t)
+            Log.e("MainActivity", "PProblem calling iTunes API", t)
         }
 
         override fun onResponse(call: Call<SearchResult>, response: Response<SearchResult>) {
