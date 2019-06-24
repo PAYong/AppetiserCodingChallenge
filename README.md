@@ -2,15 +2,15 @@
 Display a list of items obtained from an iTunes Search API and show a detailed view for each item.
 
 ## List view:
+```
 Track Name
 Track Price
 Genre
 Image
+```
 Note: There are instances that Track Name is empty (ex. Audiobook) app will just show Collection name and Collection price instead
 
 ## Detailed view:
-
-```
 Image
 Track Name
 Track Price
