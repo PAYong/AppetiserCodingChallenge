@@ -1,5 +1,5 @@
 # AppetiserCodingChallenge
-Display a list of items obtained from an iTunes Search API and show a detailed view for each item.
+App will display a list of items obtained from an iTunes Search API and show a detailed view for each item.
 
 ## List view:
 ```
@@ -11,6 +11,7 @@ Image
 Note: There are instances that Track Name is empty (ex. Audiobook) app will just show Collection name and Collection price instead
 
 ## Detailed view:
+```
 Image
 Track Name
 Track Price
@@ -29,8 +30,8 @@ The app will automatically load all items retrieved from iTunes if device is con
 Refresh 
 Saved Items
 ```
+
 Refresh - This will execute the search again.
 Saved Items - Every successful search or refresh, the app will automatically saved all items and will show in Saved Items.
 
-Note
 
