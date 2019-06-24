@@ -24,8 +24,11 @@ The app will automatically load all items retrieved from iTunes if device is con
 
 ## Two menus are available
 - Refresh 
-This will execute the search again.
+	This will execute the search again.
 - Saved Items
-Every successful search or refresh, the app will automatically saved all items and will show in Saved Items.
+	Every successful search or refresh, the app will automatically saved all items and will show in Saved Items. App is using Android's SharedPreferences.
+	The data is lost:
+		- On uninstalling the application
+		- On clearing the application data (through Settings)
 
 
