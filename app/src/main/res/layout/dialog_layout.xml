@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="500dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ImageButton
+        android:id="@+id/close_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/btn_dialog"
+        android:layout_gravity="right"
+        android:background="@color/white" />
+
+    <ImageView
+        android:id="@+id/dialog_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:scaleType="centerInside"
+        tools:src="@drawable/ic_round_face_24px" />
+
+    <TextView
+        android:id="@+id/dialog_trackname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        tools:text="Track Name" />
+
+
+    <TextView
+        android:id="@+id/dialog_trackPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textColor="#696969"
+        android:textSize="14dp"
+        tools:text="Track Price" />
+
+
+    <TextView
+        android:id="@+id/dialog_primaryGenreName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textColor="#696969"
+        android:textStyle="italic"
+        android:textSize="14dp"
+        tools:text="Genre" />
+
+    <TextView
+        android:id="@+id/artist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#696969"
+        android:textSize="14dp"
+        tools:text="Artist" />
+
+
+    <TextView
+        android:id="@+id/collection_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:textColor="#696969"
+        android:textSize="14dp"
+        tools:text="Collection Name" />
+
+    <TextView
+        android:id="@+id/collection_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#696969"
+        android:textSize="14dp"
+        tools:text="Collection Price" />
+
+    <TextView
+        android:id="@+id/country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#696969"
+        android:textSize="14dp"
+        tools:text="Country" />
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/description"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="#696969"
+            android:textSize="12dp"
+            tools:text="Description" />
+
+</ScrollView>
+
+
+</LinearLayout>
